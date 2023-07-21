@@ -31,6 +31,12 @@ function ExportToJsonButton() {
       let recordName = record.getCellValueAsString("Name");
       let recordType = record.getCellValueAsString("Type");
       let recordValue = record.getCellValueAsString("Value");
+      let recordLink = record.getCellValueAsString("Link");
+
+      // Use the value from "Link" column if "Value" is empty.
+      if (!recordValue) {
+        recordValue = `{${recordLink}}`;
+      }
 
       if (!recordName || !recordType || !recordValue) return;
 
