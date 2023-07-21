@@ -1,16 +1,14 @@
 import {
-  initializeBlock,
   useBase,
   Button,
   TablePickerSynced,
   useGlobalConfig,
   Box,
   Text,
-  FieldPickerSynced,
 } from "@airtable/blocks/ui";
 import React, { useState } from "react";
 
-function JsonImporter() {
+function ImportJsonButton() {
   const base = useBase();
   const globalConfig = useGlobalConfig();
   const tableId = globalConfig.get("selectedTableId");
@@ -63,7 +61,7 @@ function JsonImporter() {
       ) {
         records.push({
           fields: {
-            Name: path.concat(key).join(" - "),
+            Name: path.concat(key).join("-").replace(/\s/g, ""), // No spaces anywhere
             Type: nestedObj[key]["$type"],
             Value: nestedObj[key]["$value"],
           },
@@ -85,24 +83,20 @@ function JsonImporter() {
 
   return (
     <div>
-      <Box margin={3}>
+      <Box margin={3} border="default" padding={2}>
         <Text size="xlarge" weight="bold">
-          JSON to Airtable
+          Import JSON
         </Text>
-        <Text marginBottom={3}>
-          This block imports JSON data into the selected table.
+        <Text marginTop={2} variant="paragraph">
+          Select a table to import JSON data
         </Text>
-
-        <TablePickerSynced globalConfigKey="selectedTableId" marginBottom={3} />
-
+        <TablePickerSynced globalConfigKey="selectedTableId" marginBottom={2} />
         <input type="file" accept=".json" onChange={handleJsonUpload} />
-
-        <Button onClick={handleImport} marginTop={3}>
+        <Button onClick={handleImport} marginTop={1}>
           Import JSON
         </Button>
       </Box>
     </div>
   );
 }
-
-initializeBlock(() => <JsonImporter />);
+export default ImportJsonButton;
