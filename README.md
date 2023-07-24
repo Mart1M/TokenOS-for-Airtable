@@ -2,6 +2,8 @@
 
 TokenOS is an Airtable extension that seamlessly integrates with Figma, allowing you to import and export design tokens.
 
+[Documentation link](https://mart1design.notion.site/TokenOS-documentation-7afa36d2143f40c4a3ca927ab8991b3b?pvs=4)
+
 ### **Prerequisites**
 
 Before you begin, ensure you have met the following requirements:
