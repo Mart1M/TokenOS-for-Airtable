@@ -20,28 +20,29 @@ To install TokenOS, follow these steps:
 git clone <repository-url>
 ```
 
-1. Navigate to the project directory.
+2. Navigate to the project directory.
 
 ```bash
 cd TokenOS
 ```
 
-1. Install the required dependencies.
+3. Install the required dependencies.
 
 ```bash
 npm install
 ```
 
-1. In Airtable, open the Extensions dashboard by clicking the “Extensions” button at the top-right of the screen. From there, click “Add an Extension,” and then “Build a custom extension.”
+4. In Airtable, open the Extensions dashboard by clicking the “Extensions” button at the top-right of the screen. From there, click “Add an Extension,” and then “Build a custom extension.”
 
 ![](https://file.notion.so/f/s/eb25ceb3-8c26-4fb0-99be-11b34e5af95e/01-build-an-app.gif?id=ebdc91ae-7c46-48d1-9328-13703fa032e8&table=block&spaceId=68e05086-de84-4de9-8bd8-3b814fdbea53&expirationTimestamp=1690279200000&signature=iuYRc7R4AivaZMzbb7VlEYQaQ9uEHZc_ZQPykA8L4ig)
-Enter a name for this extension by typing in the “Extension name” field. This name can be anything you want - but we recommend just using whatever the developer of the Extension has named it.
+
+5. Enter a name for this extension by typing in the “Extension name” field. This name can be anything you want - but we recommend just using whatever the developer of the Extension has named it.
 
 In the “Start from an example” box, select the “Remix from Github” option. Then, add the URL to the Github repository of the extension in the “Github repository field.” Then click “Create extension.”
 
 ![](https://file.notion.so/f/s/ed46e933-26e0-4066-9f14-6b135f192d52/02-remix-from-github.gif?id=11e7d112-e8bc-4c75-8cf7-d0bf9f4dbe6e&table=block&spaceId=68e05086-de84-4de9-8bd8-3b814fdbea53&expirationTimestamp=1690279200000&signature=7bT9hNL7BAdnxSu3POpfkMHZgESCph7ek5XpUGaPwIU)
 
-Next, you’ll need to install the Blocks command-line tool - the tool that you’ll use to actually send the code for the extension to Airtable. If you've already installed the **`@airtable/blocks-cli`**, you can skip ahead. Otherwise, open your terminal and enter following command:
+6. Next, you’ll need to install the Blocks command-line tool - the tool that you’ll use to actually send the code for the extension to Airtable. If you've already installed the **`@airtable/blocks-cli`**, you can skip ahead. Otherwise, open your terminal and enter following command:
 
 ```bash
 npm install -g @airtable/blocks-cli
@@ -55,7 +56,7 @@ Follow the instructions that come up on the next screen. If this is your first t
 block set-api-key <YOUR_API_KEY>
 ```
 
-Then, return to your base, and continue the steps shown on the screen by copying and pasting the commands into your terminal and pressing Enter to run them.
+7. Then, return to your base, and continue the steps shown on the screen by copying and pasting the commands into your terminal and pressing Enter to run them.
 
 ![](https://file.notion.so/f/s/a3eca020-0452-477a-aabc-a87e9ca352bf/03-block-init.gif?id=0351382e-e8f9-4edb-bdff-ea2d3766fc6e&table=block&spaceId=68e05086-de84-4de9-8bd8-3b814fdbea53&expirationTimestamp=1690279200000&signature=thFLEMDF3hM13Yf9fkoqEJYOMgw603YHRDIAczErB0M)
 
