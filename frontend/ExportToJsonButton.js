@@ -70,7 +70,8 @@ function ExportToJsonButton() {
         Export to JSON
       </Text>
       <Text marginTop={2} variant="paragraph">
-        Select a table to export
+        Select a table to export (you must have at least 3 columns: `Name`,
+        `Type` and `Value`)
       </Text>
       <TablePickerSynced globalConfigKey="selectedTableId" marginTop={1} />
       <Button onClick={onExportButtonClick} marginTop={1}>

@@ -88,7 +88,8 @@ function ImportJsonButton() {
           Import JSON
         </Text>
         <Text marginTop={2} variant="paragraph">
-          Select a table to import JSON data
+          Select a table to import JSON data (you must have at least 3 columns:
+          `Name`, `Type` and `Value`)
         </Text>
         <TablePickerSynced globalConfigKey="selectedTableId" marginBottom={2} />
         <input type="file" accept=".json" onChange={handleJsonUpload} />
